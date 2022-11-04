@@ -3,8 +3,7 @@ MATLAB-Truthiness
 
 [![MATLAB](https://github.com/botamochi0x12/matlab-truthiness/actions/workflows/ci.yml/badge.svg)](https://github.com/botamochi0x12/matlab-truthiness/actions/workflows/ci.yml)
 
-[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/000000-matlab-truthiness)
-<!-- TODO: Replace the ID number of this project in MATLAB file exchange -->
+[![View MATLAB-Truthiness on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://jp.mathworks.com/matlabcentral/fileexchange/119863-matlab-truthiness)
 
 *MATLAB-Truthiness* extends the if-statement in MATLAB®.
 
