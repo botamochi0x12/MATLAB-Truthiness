@@ -116,6 +116,11 @@ With git (and GitHub)::
 
 With MATLAB exchange::
 
+1. Access [the page in MATLAB File Exchange](https://jp.mathworks.com/matlabcentral/fileexchange/119863-matlab-truthiness).
+2. Click "Download".
+
+With Add-on Directory in MATLAB console::
+
 :TODO: To be written.
 
 Bug Report and Contribution
