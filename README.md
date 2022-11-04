@@ -29,7 +29,7 @@ Usage Examples
 
 This section describes several exaples for the usage of the add-on *MATLAB-Truthiness*.
 
-Most of the functionarities of the `trythy` function
+Most of the functionarities of the `truthy` function
 can be confirmed by running each of the following examples as a MATLAB script
 like the following image.
 
