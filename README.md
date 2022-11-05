@@ -3,8 +3,7 @@ MATLAB-Truthiness
 
 [![MATLAB](https://github.com/botamochi0x12/matlab-truthiness/actions/workflows/ci.yml/badge.svg)](https://github.com/botamochi0x12/matlab-truthiness/actions/workflows/ci.yml)
 
-[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/000000-matlab-truthiness)
-<!-- TODO: Replace the ID number of this project in MATLAB file exchange -->
+[![View MATLAB-Truthiness on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://jp.mathworks.com/matlabcentral/fileexchange/119863-matlab-truthiness)
 
 *MATLAB-Truthiness* extends the if-statement in MATLAB®.
 
@@ -30,7 +29,7 @@ Usage Examples
 
 This section describes several exaples for the usage of the add-on *MATLAB-Truthiness*.
 
-Most of the functionarities of the `trythy` function
+Most of the functionarities of the `truthy` function
 can be confirmed by running each of the following examples as a MATLAB script
 like the following image.
 
@@ -93,7 +92,7 @@ startSecs = tic;
 toc(startSecs);
 disp('It SHOULD NOT take 1 sec.');
 
-function retval = waitForOneSec()
+function retval = waitForOneSec(~)
     pause(1);
     retval = true;
 end
@@ -116,6 +115,11 @@ With git (and GitHub)::
 3. In MATLAB command pallet, run `addpath MATLAB-Truthiness`.
 
 With MATLAB exchange::
+
+1. Access [the page in MATLAB File Exchange](https://jp.mathworks.com/matlabcentral/fileexchange/119863-matlab-truthiness).
+2. Click "Download".
+
+With Add-on Directory in MATLAB console::
 
 :TODO: To be written.
 
