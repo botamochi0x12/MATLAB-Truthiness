@@ -92,7 +92,7 @@ startSecs = tic;
 toc(startSecs);
 disp('It SHOULD NOT take 1 sec.');
 
-function retval = waitForOneSec()
+function retval = waitForOneSec(~)
     pause(1);
     retval = true;
 end
