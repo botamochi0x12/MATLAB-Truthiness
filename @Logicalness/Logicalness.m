@@ -34,7 +34,7 @@ classdef (Abstract) Logicalness < handle
         % See Also: OR
         or(self, other)
         
-        % xor : Perform the logical operation `and` between the `self`'s value and the passed value.
+        % xor : Perform the logical operation `xor` between the `self`'s value and the passed value.
         % 
         % See Also: XOR
         xor(self, other)
