@@ -1,5 +1,11 @@
 function out = truthy(varargin)
-% TODO: Write documentation
+% truthy : Bind the value to either `Truthiness` or `Falsiness`.
+%
+% Actually, this function instantiates `LazyLogical` first. 
+% After calling `LazyLogical::bind`, the value is bound to either 
+% `Truthiness` or `Falsiness`.
+%
+% See Also: TRUTHINESS, FALSINESS, LAZYLOGICAL
 
     if nargin >= 2
         warning( ...
