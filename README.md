@@ -79,6 +79,12 @@ assert((truthy(true)  | true ) == true);
 assert((truthy(true)  | false) == true);
 assert((truthy(false) | true ) == true);
 assert((truthy(false) | false) == false);
+
+%% Operation `XOR`
+assert((truthy(true) .xor(true) ) == false);
+assert((truthy(true) .xor(false)) == true);
+assert((truthy(false).xor(true) ) == true);
+assert((truthy(false).xor(false)) == false);
 ```
 
 The class `Truthiness` supports lazy evaluation.
