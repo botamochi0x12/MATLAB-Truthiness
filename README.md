@@ -129,6 +129,60 @@ With Add-on Directory in MATLAB console::
 
 :TODO: To be written.
 
+Enabling the shorthand `tr`
+---------------------------
+
+This project provides a concise shorthand function `tr` as an alias for `truthy`. To avoid surprising changes to a user's MATLAB path or accidental name collisions, the `tr` shorthand is opt-in and can be enabled or disabled with the included `setup` helper.
+
+Ways to enable `tr` (priority order used by `setup`):
+
+- Explicit argument (highest priority):
+
+```matlab
+% Positional boolean (backwards compatible)
+setup(true)          % enable `tr`
+setup(false)         % disable `tr`
+
+% Name-value pair (preferred for clarity)
+setup('enableTr', true)
+setup('enableTr', false)
+```
+
+- Environment variable (temporary, session-level):
+
+Set the environment variable `MATLAB_TR` to `1`, `true`, or `on` before starting MATLAB or in the environment where MATLAB is launched. Example for `fish` shell:
+
+```fish
+set -x MATLAB_TR 1
+# then start MATLAB or run setup() inside MATLAB
+```
+
+- Project-level flag file (persistent for the repository):
+
+Create an empty file named `.tr_enabled` at the project root to make `setup()` enable `tr` by default for that working copy:
+
+```bash
+touch .tr_enabled
+```
+
+How `setup()` decides
+---------------------
+
+When called with no arguments, `setup()` determines whether to enable `tr` using the following priority:
+
+1. If a positional boolean or the name-value `enableTr` argument is provided, use it.
+2. Otherwise, if the environment variable `MATLAB_TR` is set to `1`, `true`, or `on`, enable.
+3. Otherwise, if the repository contains a `.tr_enabled` file, enable.
+4. Otherwise, default to disabled.
+
+Notes and best practices
+------------------------
+
+- Because `addpath` / `rmpath` are used to expose or hide the shorthand, be aware of possible name collisions with other `tr` functions on your MATLAB path. `setup(true)` will warn if multiple `tr` definitions are found on the path.
+- For continuous integration or automated scripts, prefer `setup(true)` or setting `MATLAB_TR=1` at the environment level before running MATLAB.
+- If you prefer the library to always expose `tr` without using `setup`, you can add the project root to your MATLAB path permanently (for example using `addpath` in your startup script), but that removes the opt-in safety.
+
+
 Bug Report and Contribution
 ---------------------------
 
