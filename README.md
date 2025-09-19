@@ -47,7 +47,7 @@ arr2 = ones(5, 5);
 if arr1
     if arr2
         disp("All the values of `arr1` and all the values of `arr2` is true");
-    end 
+    end
 end
 
 %% An error happens
@@ -65,7 +65,7 @@ if truthy(arr1) && truthy(arr2)
 end
 ```
 
-The class `Truthiness` supports the operation "and", "or" and "xor".  
+The class `Truthiness` supports the operation "and", "or" and "xor".
 
 ```matlab
 %% Operation `AND`
@@ -91,7 +91,7 @@ The class `Truthiness` supports lazy evaluation.
 
 ```matlab
 %% Lazy Evaluation
-% NOTE: Run the below lines as a code section. 
+% NOTE: Run the below lines as a code section.
 
 startSecs = tic;
 [~] = truthy(true).orElse(@waitForOneSec);
@@ -132,7 +132,7 @@ With Add-on Directory in MATLAB console::
 Bug Report and Contribution
 ---------------------------
 
-Anyone accepting [CODE_OF_CONDUCT](./.github/CODE_OF_CONDUCT.md) can contribute to this project, 
+Anyone accepting [CODE_OF_CONDUCT](./.github/CODE_OF_CONDUCT.md) can contribute to this project,
 or anyone who found any bugs can submit a report about them to this project.
 
 Feel free to submit your ["pull requests" :twisted_rightwards_arrows:](https://github.com/botamochi0x12/matlab-truthiness/pulls) or your ["issues" :speech_balloon:](https://github.com/botamochi0x12/matlab-truthiness/issues).
