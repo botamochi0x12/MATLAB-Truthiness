@@ -12,7 +12,7 @@
 % 4. default: disabled (conservative)
 
 function setup(varargin)
-	repoRoot = fileparts(mfilename('fullpath'));
+	shorthands = fileparts(fullfile(mfilename('fullpath'), 'shorthands'));
 
 	% Parse name-value or positional argument
 	wantEnable = [];
@@ -40,17 +40,17 @@ function setup(varargin)
 			wantEnable = any(strcmpi(envVal, {'1','true','on'}));
 		else
 			% Check flag file
-			flagFile = fullfile(repoRoot, '.tr_enabled');
+			flagFile = fullfile(shorthands, '.tr_enabled');
 			wantEnable = isfile(flagFile);
 		end
 	end
 
 	% Apply path changes
-	onPath = contains(path, repoRoot);
+	onPath = contains(path, shorthands);
 	if wantEnable
 		if ~onPath
-			addpath(repoRoot);
-			fprintf('MATLAB-Truthiness: enabled `tr` (added %s to path)\n', repoRoot);
+			addpath(shorthands);
+			fprintf('MATLAB-Truthiness: enabled `tr` (added %s to path)\n', shorthands);
 		else
 			fprintf('MATLAB-Truthiness: `tr` already enabled (project on path)\n');
 		end
@@ -71,8 +71,8 @@ function setup(varargin)
 		end
 	else
 		if onPath
-			rmpath(repoRoot);
-			fprintf('MATLAB-Truthiness: disabled `tr` (removed %s from path)\n', repoRoot);
+			rmpath(shorthands);
+			fprintf('MATLAB-Truthiness: disabled `tr` (removed %s from path)\n', shorthands);
 		else
 			fprintf('MATLAB-Truthiness: `tr` is disabled (not on path)\n');
 		end
